@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+   
+</head>
+
+<body>
+   <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Програмирование III Степанакерт</h1>
+            </tr>
+            <tr>
+                <h1>Арис Агаджанян</h1>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Цвет</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Родились</th>
+                <th scope="col">Живые</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Зеленное-это Трава. Она распространяется по серым участкам также увеличивается в количестве при этом ей не нужно никого съедать.</td>
+                <td id="grassCount"></td>
+                <td id="grassLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>Желтые-это Травоядные. Передвигается по серым клеточкам. Имеют 60 оч. жизней. Чтобы выжить они должны кушать еду, чтобы размножаться они должны поедать траву больше 8 раз. Умирают если нечего не могут съесть.</td>
+                <td id="grassEaterCount"></td>
+                <td id="grassEaterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Красные-это Хищники. Передвигается по серым и зеленым клеточкам предварительно уничтожая Зеленых по которым они прошлись. Имеют 40 оч. энергии. Они питаются Травоядными и Гоблинами могут повысить популяцию если съели больше 8 существ. Умирают если некого не могут убить. </td>
+                <td id="PredatorCount"></td>
+                <td id="PredatorLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:purple;"></td>
+                <td>Фиоллетовый-это Охотники. Передвигается по Серым, Зеленым и Желтым клеточкам предварительно уничтожая Зеленых и Желтых по которым они прошлись. Имеют 60 оч. жизней. Убивают Хищников и Гоблинов. Не размножаются. Умирают если некого не могут убить.</td>
+                <td id="HunterCount"></td>
+                <td id="HunterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:olive;"></td>
+                <td>Оливковые-это Гоблины. Передвигается по серым и зеленым клеточкам предварительно уничтожая Зеленых по которым они прошлись. Имеют 40 оч. жизней. Убивают Траву,Хищников,Охотников и Травоядных. Размножаются после 3 поеданий. Умирают если некого не могут убить.</td>
+                <td id="GoblinCount"></td>
+                <td id="GoblinLiveCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
