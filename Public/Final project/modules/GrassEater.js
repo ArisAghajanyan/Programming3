@@ -33,6 +33,7 @@ module.exports = class GrassEater extends LiveForm {
             let y = newCell[1];
             matrix[y][x] = 2;
             let grassEater = new GrassEater(x, y);
+            eaterHashiv++;
             grassEaterArr.push(grassEater);
             this.life = 5;
         }
